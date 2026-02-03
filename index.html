@@ -1,253 +1,129 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>BDN - Boost Driven Nation</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Noel’s 1989 Toyota Supra</title>
 
-<style>
-  /* Reset & Base */
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-  body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #0d0d0d;
-    color: #f0f0f0;
-    line-height: 1.6;
-  }
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
 
-  /* Header */
-  header {
-    background-color: #111;
-    padding: 20px;
-    text-align: center;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.5);
-  }
-
-  .logo {
-    font-size: 2.2rem;
-    font-weight: bold;
-    color: #ff3d3d;
-    text-decoration: none;
-    transition: color 0.3s;
-  }
-
-  .logo:hover {
-    color: #ffd700;
-  }
-
-  /* HERO SECTION */
-  .hero {
-    width: 100%;
-    padding: 40px 20px;
-    margin: 0 auto 40px auto;
-    max-width: 1400px;
-  }
-
-  .hero-images {
-    display: flex;
-    gap: 20px;
-    justify-content: center;
-    margin-bottom: 25px;
-  }
-
-  .hero-images img {
-    width: 48%;
-    border-radius: 14px;
-    box-shadow: 0 0 25px rgba(255, 0, 0, 0.35);
-    transition: transform 0.4s ease, box-shadow 0.4s ease;
-    cursor: pointer;
-  }
-
-  .hero-images img:hover {
-    transform: scale(1.03);
-    box-shadow: 0 0 40px rgba(255, 61, 61, 0.7);
-  }
-
-  .hero-text {
-    text-align: center;
-  }
-
-  .hero-text h1 {
-    font-size: 3rem;
-    color: #ff3d3d;
-    font-weight: bold;
-    margin-bottom: 10px;
-  }
-
-  .hero-text p {
-    font-size: 1.3rem;
-    color: #ffd700;
-    opacity: 0.9;
-  }
-
-  /* Section */
-  .supra-section {
-    max-width: 1200px;
-    margin: 40px auto;
-    padding: 0 20px;
-  }
-
-  .supra-header {
-    text-align: center;
-    font-size: 2.8rem;
-    font-weight: bold;
-    margin-bottom: 15px;
-    color: #ff3d3d;
-  }
-
-  .supra-overview {
-    text-align: center;
-    font-size: 1.2rem;
-    margin-bottom: 40px;
-    line-height: 1.7;
-  }
-
-  .supra-overview span {
-    color: #ffd700;
-    font-weight: bold;
-  }
-
-  /* Gallery */
-  .supra-gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 20px;
-    margin-bottom: 40px;
-  }
-
-  .supra-gallery img {
-    width: 100%;
-    border-radius: 12px;
-    transition: transform 0.4s, box-shadow 0.3s;
-    cursor: pointer;
-  }
-
-  .supra-gallery img:hover {
-    transform: scale(1.05);
-    box-shadow: 0 10px 30px rgba(255,61,61,0.6);
-  }
-
-  /* Cards */
-  .card {
-    background-color: #1c1c1c;
-    padding: 25px;
-    border-radius: 12px;
-    margin-bottom: 30px;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.5);
-    transition: transform 0.3s, background-color 0.3s;
-  }
-
-  .card:hover {
-    transform: translateY(-5px);
-    background-color: #272727;
-  }
-
-  .card h2 {
-    color: #ff3d3d;
-    margin-bottom: 15px;
-  }
-
-  .card ul {
-    list-style: none;
-    padding: 0;
-  }
-
-  .card li {
-    display: flex;
-    justify-content: space-between;
-    padding: 10px;
-    border-radius: 6px;
-    background-color: #111;
-    margin-bottom: 10px;
-    transition: background-color 0.3s;
-  }
-
-  .card li span {
-    font-weight: bold;
-    color: #ffd700;
-  }
-
-  /* Responsive */
-  @media(max-width: 700px) {
-    .hero-images {
-      flex-direction: column;
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Quicksand', sans-serif;
+      background: linear-gradient(135deg, #ffd1dc, #f3d1ff);
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      min-height: 100vh;
+      padding-top: 2rem;
     }
 
-    .hero-images img {
+    .container {
+      background: rgba(255, 255, 255, 0.9);
+      padding: 2rem;
+      border-radius: 20px;
+      max-width: 420px;
+      width: 90%;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+      animation: fadeIn 1.2s ease;
+      text-align: center;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    h1 {
+      font-family: 'Pacifico', cursive;
+      font-size: 2rem;
+      color: #ff4d6d;
+      margin-bottom: 0.5rem;
+    }
+
+    .tagline {
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin-bottom: 1.5rem;
+      color: #444;
+    }
+
+    .supra-photo img {
       width: 100%;
+      max-width: 350px;
+      border-radius: 15px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+      margin-bottom: 1.5rem;
     }
 
-    .hero-text h1 {
-      font-size: 2.2rem;
+    .fast-question {
+      margin-top: 1rem;
+      font-size: 1.3rem;
+      font-weight: 600;
     }
-  }
 
-  @media(max-width: 600px){
-    .supra-header { font-size: 2.2rem; }
-    .logo { font-size: 1.8rem; }
-  }
-</style>
+    .fast-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    .fast-btn {
+      padding: 0.7rem 1.4rem;
+      border: none;
+      border-radius: 25px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: 0.25s ease;
+      color: white;
+    }
+
+    .fast-btn.yes {
+      background: #ff4d6d;
+      position: relative;
+    }
+
+    .fast-btn.no {
+      background: #6c63ff;
+    }
+  </style>
 </head>
 
 <body>
+  <div class="container">
 
-<header>
-  <a href="index.html" class="logo">BDN</a>
-</header>
-
-<!-- HERO SECTION -->
-<section class="hero">
-  <div class="hero-images">
-    <img src="images/supra-ground.jpg" alt="Supra on grass">
-    <img src="images/supra-cloud.jpg" alt="Supra in clouds">
-  </div>
-
-  <div class="hero-text">
     <h1>Noel’s 1989 Toyota Supra</h1>
-    <p>Built to boost. Tuned to hunt. Restored to perfection.</p>
-  </div>
-</section>
+    <p class="tagline">Built to boost. Tuned to hunt. Restored to perfection.</p>
 
-<section class="supra-section">
+    <!-- Centered Supra Photo -->
+    <div class="supra-photo">
+      <img src="YOUR_SUPRA_IMAGE_URL_HERE" alt="Noel's Supra">
+    </div>
 
-  <p class="supra-overview">
-    Fully restored and upgraded, Noel's Supra swapped the <span>USA 7M-GE</span> for a <span>JDM 1JZ</span>.
-    Fuel system upgraded with <span>ID 1250cc injectors</span> and <span>dual Hellcat fuel pumps</span>,
-    paired with an <span>upgraded no-name intercooler</span> and a <span>85mm BorgWarner single turbo</span> pushing ~650whp on 42PSI.
-    Tuned by <span>Matt Shue</span>, which explains why it still loses to Blake's 2015 Audi A3.
-    Full restoration complete and <span>for sale: $22,000</span>!
-  </p>
+    <!-- Fast Question -->
+    <div class="fast-question">
+      Is this car fast?
+      <div class="fast-buttons">
+        <button id="fastYes" class="fast-btn yes">Yes</button>
+        <button id="fastNo" class="fast-btn no">No</button>
+      </div>
+    </div>
 
-  <div class="supra-gallery">
-    <img src="images/supra-exterior.jpg" alt="Noel's Supra Exterior">
-    <img src="images/supra-engine.jpg" alt="Noel's Supra Engine">
-    <img src="images/supra-interior.jpg" alt="Noel's Supra Interior">
   </div>
 
-  <div class="card">
-    <h2>Specifications & Modifications</h2>
-    <ul>
-      <li>Engine: <span>JDM 1JZ swap</span></li>
-      <li>Fuel System: <span>ID 1250cc injectors + dual Hellcat fuel pumps</span></li>
-      <li>Turbo: <span>BorgWarner single turbo</span></li>
-      <li>Intercooler: <span>No-name upgraded</span></li>
-      <li>Horsepower: <span>~650 whp</span></li>
-      <li>Tuning: <span>Matt Shue</span></li>
-      <li>Notes: <span>Full restoration, for sale $22k</span></li>
-    </ul>
-  </div>
+  <script>
+    const fastYes = document.getElementById('fastYes');
 
-  <div class="card">
-    <h2></h2>
-    <ul>
-      <li><span>Tein Coilovers and all new bushings:</span> AC works</li>
-      <li><span>Exterior Mods:</span> New widebody kit and paint</li>
-      <li><span>Performance:</span> Track-tuned ECU & upgraded intercooler</li>
-    </ul>
-  </div>
-
-</section>
+    fastYes.addEventListener('mouseenter', () => {
+      const x = Math.random() * 200 - 100;
+      const y = Math.random() * 200 - 100;
+      fastYes.style.transform = `translate(${x}px, ${y}px)`;
+    });
+  </script>
 
 </body>
 </html>
-
